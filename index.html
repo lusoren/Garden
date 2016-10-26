@@ -1,0 +1,31 @@
+<!DOCTYPE HTML> 
+<html> 
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+	<script type="text/javascript" src="https://code.jquery.com/jquery-latest.js"></script>
+    <script type="text/javascript" src="Script/script.js"></script>
+    
+    <Link rel="stylesheet" href="style.css" />
+    
+</head>
+
+<body>
+	
+
+    
+    <script src="Script/skrollr.js""></script>
+
+    <script type="text/javascript">
+	skrollr.init({
+
+		render: function(data) {
+			 if(data.curTop === data.maxTop) {
+                this.setScrollTop(0, true);
+				addFern();
+            }
+		}
+	});
+    </script>
+    
+</body>
+</html>
