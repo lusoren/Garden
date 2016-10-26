@@ -1,6 +1,6 @@
 function addPlant(num) {
     var rand= Math.random()*2
-   if (rand<1.5) {
+   if (rand<1) {
     addFern();
    } else{
     addCact();
