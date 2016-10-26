@@ -40,6 +40,9 @@ function addFern() {
    
    var width= Math.round(height * .15);
    $("#" + divId).css("width", width + "px");
+   
+   var zindex= Math.round(Math.random() *10)
+   $("#" + divId).css("z-index", zindex);
     
    fernCounter++;
    
@@ -53,18 +56,17 @@ function addCact() {
     var divId = "Cact" + cactCounter;
     
     //start and subsquent skrollr data values
-    var start= Math.round(Math.random() *6500);
+    var start= Math.round(Math.random() *8000);
     var second= start + 1000;
-    var third= second + 500;
-    var fourth= third + 500;
-    var fifth= Math.round(fourth + 500);
+    var third= second + 1000;
+
     
     var add="";
     
     add+= "<div class=\"plantBottom\" id=\"" + divId + "\">";
-	add+= "<img class=\"cact\" src=\"Images/Cactus.png\" data-1000=\"transform:rotateY(90deg);\" data-2000=\"transform:rotateY(0deg)\">"
-	add+= "<img class=\"cact\" src=\"Images/Cactus.png\" data-1000=\"transform:rotateY(90deg)\" data-2000=\"transform:rotateY(35deg)\">"
-	add+= "<img class=\"cact\" src=\"Images/Cactus.png\" data-0=\"height:0%\" data-1000=\"transform:rotateY(60deg);height:100%\" data-2000=\"transform:rotateY(60deg)\">"
+	add+= "<img class=\"cact\" src=\"Images/Cactus.png\" data-" + second + "=\"transform:rotateY(90deg);\" data-" + third + "=\"transform:rotateY(0deg)\">"
+	add+= "<img class=\"cact\" src=\"Images/Cactus.png\" data-" + second + "=\"transform:rotateY(90deg)\" data-"+ third + "=\"transform:rotateY(35deg)\">"
+	add+= "<img class=\"cact\" src=\"Images/Cactus.png\" data-" + start + "=\"height:0%\" data-"+ second + "=\"transform:rotateY(60deg);height:100%\" data-" + third + "=\"transform:rotateY(60deg)\">"
 	add+= "</div>"
     
    $("body").prepend(add);
@@ -77,6 +79,9 @@ function addCact() {
    
    var width= Math.round(Math.random() *100) +100;
    $("#" + divId).css("width", width + "px");
+   
+   var zindex= Math.round(Math.random() *10)
+   $("#" + divId).css("z-index", zindex);
     
    cactCounter++;
    
