@@ -43,6 +43,9 @@ function addFern() {
    
    var zindex= Math.round(Math.random() *10)
    $("#" + divId).css("z-index", zindex);
+   
+   var hue= Math.round(Math.random() * 360)
+   $("#" + divId).css("filter", "hue-rotate("+ hue +"deg)");
     
    fernCounter++;
    
@@ -82,6 +85,9 @@ function addCact() {
    
    var zindex= Math.round(Math.random() *10)
    $("#" + divId).css("z-index", zindex);
+   
+   var hue= Math.round(Math.random() * 360)
+   $("#" + divId).css("filter", "hue-rotate("+ hue +"deg)");
     
    cactCounter++;
    
