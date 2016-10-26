@@ -5,29 +5,38 @@ function addPlant(num) {
 
 var fernCounter=0;
 function addFern() {
-    alert("jello");
+
     
     var start= Math.round(Math.random() *6500);
+    var second= start + 1000;
+    var third= second + 500;
+    var fourth= third + 500;
+    var fifth= Math.round(fourth + 500);
+    
     var divId = "Fern" + fernCounter;
     
+    var add="";
     
-    $("body").append("<div class=\"plantBottom\" id=\"" + divId + "\">");
-        $("body").append("<img class=\"fern\" src=\"Images/Long.png\" data-0=\"height:0%;\" data-1000=\"height:50%;\" data-1500=\"\" 					     data-2000=\"height:50%;\" 							 data-2500=\"height:100%;\">");
-        $("body").append("<img class=\"fern\" src=\"Images/Long.png\" data-0=\"height:0%;\" data-1000=\"height:50%;\" data-1500=\"transform:rotate(0deg);\" data-2000=\"transform:rotate(20deg); height:50%;\"  data-3000=\"height:100%;\">");
-        $("body").append("<img class=\"fern\" src=\"Images/Long.png\" data-0=\"height:0%;\" data-1000=\"height:50%;\" data-1500=\"transform:rotate(0deg);\" data-2000=\"transform:rotate(40deg); height:50%;\"	 data-3500=\"height:100%;\">");
-        $("body").append("<img class=\"fern\" src=\"Images/Long.png\" data-0=\"height:0%;\" data-1000=\"height:50%;\" data-1500=\"transform:rotate(0deg);\" data-2000=\"transform:rotate(-20deg); height:50%;\" data-3000=\"height:100%;\">");
-        $("body").append("<img class=\"fern\" src=\"Images/Long.png\" data-0=\"height:0%;\" data-1000=\"height:50%;\" data-1500=\"transform:rotate(0deg);\" data-2000=\"transform:rotate(-40deg); height:50%;\" data-3500=\"height:100%;\">");
-    $("body").append("</div>");
+    add+= "<div class=\"plantBottom\" id=\"" + divId + "\">";
+    add+= "<img class=\"fern\" src=\"Images/Long.png\" data-" + start + "=\"height:0%;\" data-" + second + "=\"height:50%;\"              					                data-" + fourth + "=\"height:50%;\" 			                data-" + fifth + "=\"height:100%;\">";
+    add+= "<img class=\"fern\" src=\"Images/Long.png\" data-" + start + "=\"height:0%;\" data-" + second + "=\"height:50%;\" data-" + third + "=\"transform:rotate(0deg);\" data-" + fourth + "=\"transform:rotate(20deg); height:50%;\"    data-" + (fifth + 500) +"=\"height:100%;\">";
+    add+= "<img class=\"fern\" src=\"Images/Long.png\" data-" + start + "=\"height:0%;\" data-" + second + "=\"height:50%;\" data-" + third + "=\"transform:rotate(0deg);\" data-" + fourth + "=\"transform:rotate(40deg); height:50%;\"	data-" + (fifth + 1000) + "=\"height:100%;\">";
+    add+= "<img class=\"fern\" src=\"Images/Long.png\" data-" + start + "=\"height:0%;\" data-" + second + "=\"height:50%;\" data-" + third + "=\"transform:rotate(0deg);\" data-" + fourth + "=\"transform:rotate(-20deg); height:50%;\"   data-" + (fifth + 500) + "=\"height:100%;\">";
+    add+= "<img class=\"fern\" src=\"Images/Long.png\" data-" + start + "=\"height:0%;\" data-" + second + "=\"height:50%;\" data-" + third + "=\"transform:rotate(0deg);\" data-" + fourth + "=\"transform:rotate(-40deg); height:50%;\"   data-" + (fifth + 1000) + "=\"height:100%;\">";
+    add+= "</div>";
     
+   $("body").prepend(add);
    
    var pos= Math.round(Math.random() *100);
-   $(divId).css("left", pos + "%");
+   $("#" + divId).css("left", pos + "%");
    
    var height= Math.round(Math.random() *100) +200;
-   $(divId).css("height", height + "px");
+   $("#" + divId).css("height", height + "px");
    
-   var width= Math.round(height * 1.2);
-   $(divId).css("width", width + "px");
+   var width= Math.round(height * .15);
+   $("#" + divId).css("width", width + "px");
     
-    fernCounter++;
+   fernCounter++;
+   
+   s.refresh();
 }
