@@ -1,10 +1,19 @@
-function addPlant(num) {
-    var rand= Math.round(Math.random()*2);
+$(document).ready(function(){
+    addPlant();
+});
+
+function addPlant() {
+    var rand= Math.floor(Math.random()*5);
+    console.log(rand);
    
     if (rand==0) {
         addFern();
-    } if (rand ==1){
+    } else if (rand ==1){
         addCact();
+    } else if (rand ==2){
+        addCurl();
+    } else if (rand ==3){
+        addVine();
     } else {
         addStalk();
     }
@@ -44,7 +53,7 @@ function addFern() {
    var width= Math.round(height * .15);
    $("#" + divId).css("width", width + "px");
    
-   var zindex= Math.round(Math.random() *7)
+   var zindex= Math.round(Math.random() *7);
    $("#" + divId).css("z-index", zindex);
    
    var hue= Math.round(Math.random() * 360)
@@ -82,13 +91,14 @@ function addCact() {
    var height= Math.round(Math.random() *500) +200;
    $("#" + divId).css("height", height + "px");
    
-   var width= Math.round(Math.random() *50) +50;
+   var width= Math.round(Math.random() *100) +100;
    $("#" + divId).css("width", width + "px");
    
    var zindex= Math.round(Math.random() *3)
    $("#" + divId).css("z-index", zindex);
    
-   var hue= Math.round(Math.random() * 360)
+   var hue= Math.round(Math.random() * 360);
+
    $("#" + divId).css("filter", "hue-rotate("+ hue +"deg)");
     
    cactCounter++;
