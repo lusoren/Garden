@@ -25,7 +25,7 @@ function addStalk() {
    var pos= Math.round(Math.random() *100);
    $("#" + divId).css("left", pos + "%");
    
-   var height= Math.round(Math.random() *40) + 60;
+   var height= Math.round(Math.random() *40) + 50;
    $("#" + divId).css("height", height + "%");
    
    var width= 150;
