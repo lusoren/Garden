@@ -5,6 +5,19 @@ body {
     height: 10000px;
 }
 
+.plantBottom {
+    position: fixed;
+    left: 50%;
+
+    top: inherit;
+    transform: translate(-50%,0%);
+    
+    bottom: 0px;
+    
+    opacity:.5;
+}
+
+/*--------------------CACTUS--------------------*/
 .cact {
     position: absolute;
     
@@ -15,6 +28,7 @@ body {
     height: 100%;
 }
 
+/*--------------------FERN--------------------*/
 .fern {
     position: absolute;
     bottom: 0;
@@ -25,12 +39,23 @@ body {
     transform-origin: bottom;
 }
 
-.plantBottom {
-    position: fixed;
+/*--------------------STALK--------------------*/
+.stem {
+    position: absolute;
+    transform: translate(-50%,0);
+    bottom: 0;
     left: 50%;
-
-    top: inherit;
-    transform: translate(-50%,0%);
+    height: 102%;
     
-    bottom: 0px;
+    width: 10px;
+    z-index: 2;
+}
+
+.lef {
+    position: absolute;
+    transform: translate(-50%,0);
+    bottom: 0;
+    left: 50%;
+    
+    transform-origin: bottom;
 }
