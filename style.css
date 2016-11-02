@@ -106,7 +106,7 @@ body {
     transform-origin: bottom;
 }
 
-#flower {
+.flower {
     position: absolute;
     left: 50%;
     width:30px;

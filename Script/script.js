@@ -1,9 +1,9 @@
 $(document).ready(function(){
-    addFlower();
+    addPlant();
 });
 
 function addPlant() {
-    var rand= Math.floor(Math.random()*5);
+    var rand= Math.floor(Math.random()*6);
     console.log(rand);
    
     if (rand==0) {
@@ -99,7 +99,7 @@ function addCact() {
    var width= Math.round(Math.random() *50) + 100;
    $("#" + divId).css("width", width + "px");
    
-   var zindex= Math.round(Math.random() *3)
+   var zindex= Math.round(Math.random() *5)
    $("#" + divId).css("z-index", zindex);
    
    var hue= Math.round(Math.random() * 360);

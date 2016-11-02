@@ -27,7 +27,7 @@ function addStr8() {
     var width= 12;
     $("#" + divId).css("width", width + "px");
     
-    var zindex= Math.round(Math.random() *10)
+    var zindex= Math.round(Math.random() *8)
     $("#" + divId).css("z-index", zindex);
     
     var hue= Math.round(Math.random() * 360);
@@ -45,10 +45,11 @@ function addFlower() {
     
     //unique class id
     var divId = "flower" + flowerCounter;
+    var flowerId = "flowerr" + flowerCounter;
     
     //start and subsquent skrollr data values
-    var start=  Math.round(Math.random() * 6500);
-    var second= start + 500;
+    var start=  Math.round(Math.random() * 9000);
+    var second= start + 800;
     var third=  start + 1200;
     var fourth= third + 1300;
 
@@ -57,7 +58,7 @@ function addFlower() {
     
     add+= "<div class=\"plantBottom\" id=\"" + divId + "\">";
         add+= "<img class=\"stem\" src=\"Images/Stem.png\"     data-" + start + "=\"height:0%;\"		    data-" + third + "=\"height:105%\">";
-            add+= "<div id=\"flower\"                          data-" + start + "=\"bottom:0%;\"            data-" + third + "=\"bottom:100%;\">";
+            add+= "<div class=\"flower\"  id=\"" + flowerId + "\"   data-" + start + "=\"bottom:0%;\"            data-" + third + "=\"bottom:100%;\">";
         
             add+= "<img class=\"ped\" src=\"Images/Pedal.png\" data-" + start + "=\"height:0%;\"     	   			     data-" + second + "=\"height:50%\" data-" + third + "=\"height:50%;\" 							  data-" + fourth + "=\"height:100%;\">";
             add+= "<img class=\"ped\" src=\"Images/Pedal.png\" data-" + start + "=\"height:0%;transform:rotate(0deg);\"  data-" + second + "=\"height:50%\" data-" + third + "=\"transform:rotate(20deg); height:50%;\"   data-" + fourth + "=\"height:100%;\">";
@@ -84,6 +85,9 @@ function addFlower() {
     
     var hue= Math.round(Math.random() * 360);
     $("#" + divId).css("filter", "hue-rotate("+ hue +"deg)");
+    
+    var hue2= Math.round(Math.random() * 360);
+    $("#" + flowerId).css("filter", "hue-rotate("+ hue2 +"deg)");
      
     flowerCounter++;
     
