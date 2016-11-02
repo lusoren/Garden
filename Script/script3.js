@@ -50,7 +50,7 @@ function addFlower() {
     var start=  Math.round(Math.random() * 6500);
     var second= start + 500;
     var third=  start + 1200;
-    var fourth= third + 2300;
+    var fourth= third + 1300;
 
     
     var add="";
