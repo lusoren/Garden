@@ -47,21 +47,23 @@ function addFlower() {
     var divId = "flower" + flowerCounter;
     
     //start and subsquent skrollr data values
-    var start= Math.round(Math.random() *8000);
-    var second= start + 2000;
+    var start=  Math.round(Math.random() * 6500);
+    var second= start + 500;
+    var third=  start + 1200;
+    var fourth= third + 2300;
 
     
     var add="";
     
     add+= "<div class=\"plantBottom\" id=\"" + divId + "\">";
-        add+= "<img class=\"stem\" src=\"Images/Stem.png\"         data-0=\"height:0%;\"		    data-1200=\"height:105%\">";
-            add+= "<div id=\"flower\"                              data-0=\"bottom:0%;\"            data-1200=\"bottom:100%;\">";
+        add+= "<img class=\"stem\" src=\"Images/Stem.png\"     data-" + start + "=\"height:0%;\"		    data-" + third + "=\"height:105%\">";
+            add+= "<div id=\"flower\"                          data-" + start + "=\"bottom:0%;\"            data-" + third + "=\"bottom:100%;\">";
         
-            add+= "<img class=\"ped\" src=\"Images/Pedal.png\" data-0=\"height:0%;\"     	   			     data-500=\"height:50%\" data-1200=\"height:50%;\" 							  data-3500=\"height:100%;\">";
-            add+= "<img class=\"ped\" src=\"Images/Pedal.png\" data-0=\"height:0%;transform:rotate(0deg);\"  data-500=\"height:50%\" data-1200=\"transform:rotate(20deg); height:50%;\"   data-3500=\"height:100%;\">";
-            add+= "<img class=\"ped\" src=\"Images/Pedal.png\" data-0=\"height:0%;transform:rotate(0deg);\"  data-500=\"height:50%\" data-1200=\"transform:rotate(40deg); height:50%;\"	  data-3500=\"height:100%;\">";
-            add+= "<img class=\"ped\" src=\"Images/Pedal.png\" data-0=\"height:0%;transform:rotate(0deg);\"  data-500=\"height:50%\" data-1200=\"transform:rotate(-20deg); height:50%;\"  data-3500=\"height:100%;\">";
-            add+= "<img class=\"ped\" src=\"Images/Pedal.png\" data-0=\"height:0%;transform:rotate(0deg);\"  data-500=\"height:50%\" data-1200=\"transform:rotate(-40deg); height:50%;\"  data-3500=\"height:100%;\">";
+            add+= "<img class=\"ped\" src=\"Images/Pedal.png\" data-" + start + "=\"height:0%;\"     	   			     data-" + second + "=\"height:50%\" data-" + third + "=\"height:50%;\" 							  data-" + fourth + "=\"height:100%;\">";
+            add+= "<img class=\"ped\" src=\"Images/Pedal.png\" data-" + start + "=\"height:0%;transform:rotate(0deg);\"  data-" + second + "=\"height:50%\" data-" + third + "=\"transform:rotate(20deg); height:50%;\"   data-" + fourth + "=\"height:100%;\">";
+            add+= "<img class=\"ped\" src=\"Images/Pedal.png\" data-" + start + "=\"height:0%;transform:rotate(0deg);\"  data-" + second + "=\"height:50%\" data-" + third + "=\"transform:rotate(40deg); height:50%;\"	  data-" + fourth + "=\"height:100%;\">";
+            add+= "<img class=\"ped\" src=\"Images/Pedal.png\" data-" + start + "=\"height:0%;transform:rotate(0deg);\"  data-" + second + "=\"height:50%\" data-" + third + "=\"transform:rotate(-20deg); height:50%;\"  data-" + fourth + "=\"height:100%;\">";
+            add+= "<img class=\"ped\" src=\"Images/Pedal.png\" data-" + start + "=\"height:0%;transform:rotate(0deg);\"  data-" + second + "=\"height:50%\" data-" + third + "=\"transform:rotate(-40deg); height:50%;\"  data-" + fourth + "=\"height:100%;\">";
             
         add+="</div>";
 	add+="</div>";

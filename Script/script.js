@@ -52,7 +52,7 @@ function addFern() {
    var height= Math.round(Math.random() *100) +200;
    $("#" + divId).css("height", height + "px");
    
-   var width= Math.round(height * .15);
+   var width= Math.round(height * .13);
    $("#" + divId).css("width", width + "px");
    
    var zindex= Math.round(Math.random() *7);
