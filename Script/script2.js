@@ -6,8 +6,8 @@ function addStalk() {
     
     //start and subsquent skrollr data values
     var start= Math.round(Math.random() *7500);
-    var second= start + 300;
-    var third= second + 1200;
+    var second= start + 1000;
+    var third= second + 2000;
     
     var add="";
     

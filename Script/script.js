@@ -1,5 +1,5 @@
 $(document).ready(function(){
-    addPlant();
+    addFlower();
 });
 
 function addPlant() {
@@ -11,9 +11,11 @@ function addPlant() {
     } else if (rand ==1){
         addCact();
     } else if (rand ==2){
-        addCurl();
+        addStr8();
     } else if (rand ==3){
         addVine();
+    } else if (rand ==4){
+        addFlower();
     } else {
         addStalk();
     }
@@ -26,10 +28,10 @@ function addFern() {
     var divId = "Fern" + fernCounter;
     
     //start and subsquent skrollr data values
-    var start= Math.round(Math.random() *6500);
-    var second= start + 1000;
-    var third= second + 500;
-    var fourth= third + 500;
+    var start= Math.round(Math.random() *6000);
+    var second= start + 2000;
+    var third= second + 1000;
+    var fourth= third + 1000;
     var fifth= Math.round(fourth + 500);
     
     var add="";
@@ -74,13 +76,16 @@ function addCact() {
     var start= Math.round(Math.random() *8000);
     var second= start + 1000;
     var third= second + 1000;
+    var fourth= third+ 1000;
     
     var add="";
     
     add+= "<div class=\"plantBottom\" id=\"" + divId + "\">";
-	add+= "<img class=\"cact\" src=\"Images/Cactus.png\" data-" + second + "=\"transform:rotateY(90deg);\" data-" + third + "=\"transform:rotateY(0deg)\">"
-	add+= "<img class=\"cact\" src=\"Images/Cactus.png\" data-" + second + "=\"transform:rotateY(90deg)\" data-"+ third + "=\"transform:rotateY(35deg)\">"
-	add+= "<img class=\"cact\" src=\"Images/Cactus.png\" data-" + start + "=\"height:0%\" data-"+ second + "=\"transform:rotateY(60deg);height:100%\" data-" + third + "=\"transform:rotateY(60deg)\">"
+    
+    add+= "<img class=\"cact\" src=\"Images/Cactus.png\" data-" + second+ "=\"width:0%;\" data-" + fourth + "=\"width:100%\">"
+	add+= "<img class=\"cact\" src=\"Images/Cactus.png\" data-" + second + "=\"width:0%\"  data-"+ third + "=\"width:70%\">"
+    add+= "<img class=\"cact\" src=\"Images/Cactus.png\" data-" + start + "=\"height:0%\" data-"+ second + "=\"width:40%;height:100%\">"
+	
 	add+= "</div>"
     
    $("body").prepend(add);
@@ -88,10 +93,10 @@ function addCact() {
    var pos= Math.round(Math.random() *100);
    $("#" + divId).css("left", pos + "%");
    
-   var height= Math.round(Math.random() *500) +200;
-   $("#" + divId).css("height", height + "px");
+   var height= Math.round(Math.random() *50) +20;
+   $("#" + divId).css("height", height + "%");
    
-   var width= Math.round(Math.random() *100) +100;
+   var width= Math.round(Math.random() *50) + 100;
    $("#" + divId).css("width", width + "px");
    
    var zindex= Math.round(Math.random() *3)
