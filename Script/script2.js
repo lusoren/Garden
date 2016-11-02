@@ -112,7 +112,7 @@ function addVine() {
    var width= 400;
    $("#" + divId).css("width", width + "px");
    
-   var zindex= Math.round(Math.random() *8)
+   var zindex= Math.round(Math.random() *7)
    $("#" + divId).css("z-index", zindex);
    
    var hue= Math.round(Math.random() * 360);

@@ -99,7 +99,7 @@ function addCact() {
    var width= Math.round(Math.random() *50) + 100;
    $("#" + divId).css("width", width + "px");
    
-   var zindex= Math.round(Math.random() *5)
+   var zindex= Math.round(Math.random() *6)
    $("#" + divId).css("z-index", zindex);
    
    var hue= Math.round(Math.random() * 360);
