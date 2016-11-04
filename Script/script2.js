@@ -31,7 +31,7 @@ function addStalk() {
    var width= 150;
    $("#" + divId).css("width", width + "px");
    
-   var zindex= Math.round(Math.random() *10)
+   var zindex= Math.round(Math.random() *7)
    $("#" + divId).css("z-index", zindex);
    
    var hue= Math.round(Math.random() * 360);

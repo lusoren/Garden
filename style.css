@@ -32,10 +32,11 @@ body {
 
     
     transform: translate(-50%,0%);
-    width: 100%;
+    width:0%;
+    height: 100%;
 
     bottom: 0;
-    height: 100%;
+
 }
 
 /*--------------------FERN--------------------*/
@@ -44,7 +45,7 @@ body {
     bottom: 0;
     
     width: 100%;
-    height: 100%;
+    height: 0%;
     
     transform-origin: bottom;
 }
@@ -55,7 +56,7 @@ body {
     transform: translate(-50%,0);
     bottom: 0;
     left: 50%;
-    height: 102%;
+    height: 0%;
     
     width: 10px;
     z-index: 2;
@@ -66,6 +67,7 @@ body {
     transform: translate(-50%,0);
     bottom: 0;
     left: 50%;
+    height: 0%;
     
     transform-origin: bottom;
 }
@@ -77,6 +79,7 @@ body {
     
     width: 100%;
     height: 100%;
+    top:-100%;
     
     transform-origin: bottom;
 }
@@ -92,7 +95,8 @@ body {
     top: 0;
     transform: rotateX(180deg);
     width: 100%;
-    height: 100%;
+    height: 0%;
+
 }
 
 /*--------------------FLOWER--------------------*/
